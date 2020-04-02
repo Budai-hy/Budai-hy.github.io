@@ -70,7 +70,7 @@
 
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="is-2-column">
+<body class="is-3-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
@@ -117,7 +117,87 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-26T16:11:12.000Z">2020-03-27</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 571 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/27/nprogress.js%E8%BF%9B%E5%BA%A6%E6%9D%A1/">NProgress.js之进度条插件</a>
+            
+        </h1>
+        <div class="content">
+            <hr>
+<h2 id="NProgress-js"><a href="#NProgress-js" class="headerlink" title="NProgress.js"></a>NProgress.js</h2><p>　　</p>
+<p>说明:<br>　　NProgress是基于jquery的，且版本要 &gt;1.8</p>
+<p>　　下载地址:<br>　　　　<a href="https://github.com/rstacruz/nprogress">https://github.com/rstacruz/nprogress</a></p>
+<h2 id="API"><a href="#API" class="headerlink" title="API:　　　"></a>API:　　　</h2><p>   NProgress.start() — 启动进度条<br>　　　　NProgress.set(0.4) —   将进度设置到具体的百分比位置<br>　　　　NProgress.inc() — 少量增加进度<br>　　　　NProgress.done() — 将进度条标为完成状态</p>
+<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤:"></a>使用步骤:</h2><p>　1. 引入<br>     在你的要用的界面上引入js和css文件<br>     //还有jquery要之前引入进来</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> <span class="built_in">type</span>=<span class="string">"text/css"</span> href=<span class="string">"css/NProgress.css"</span> rel=<span class="string">"external nofollow"</span> &gt;</span><br><span class="line"> &lt;script src=<span class="string">"js/NProgress.js"</span> <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;&lt;/script&gt;&lt;br&gt;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>进度条样式修改<br>点滴下载好的NProgress包，找到NProgress.css文件中的<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">#nprogress .bar &#123;</span></span><br><span class="line">  //进度条颜色</span><br><span class="line">  background: greenyellow;</span><br><span class="line"></span><br><span class="line">  position: fixed;</span><br><span class="line">  z-index: 10000;</span><br><span class="line">  top: 0;</span><br><span class="line">  left: 0;</span><br><span class="line"></span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 2px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>　3. 使用场景一:页面加载的效果  开始页面加载开始进度条  页面加载好  结束进度条:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;em id=<span class="string">"__mceDel"</span>&gt;&lt;script&gt;</span><br><span class="line">$(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line"> 　　NProgress.start();</span><br><span class="line"> 　　$(window).load(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">   　　NProgress.done();</span><br><span class="line"> &#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/em&gt;</span><br></pre></td></tr></table></figure>
+<p>　4.使用场景二:ajax发送的效果  开始发送开始进度条  成功后  结束进度条:<br>    有相关配置：新建一个js文件输入以下代码，引入到html文件中<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">// 是否显示右上角加载圈圈</span><br><span class="line">NProgress.configure(&#123; showSpinner: <span class="literal">false</span> &#125;);</span><br><span class="line">$(window).ajaxStart(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    /*只要使用的ajax就会执行这个方法*/</span><br><span class="line">    /*开启进度条*/</span><br><span class="line">    NProgress.start();</span><br><span class="line">&#125;);</span><br><span class="line">$(window).ajaxComplete(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    /*结束进度条*/</span><br><span class="line">    NProgress.done();</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="其他参数配置"><a href="#其他参数配置" class="headerlink" title="其他参数配置"></a>其他参数配置</h2><pre><code>minimum
+
+设置开始时最低百分比，默认是0.08。</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NProgress.configure(&#123; minimum: 0.1 &#125;);</span><br><span class="line">template</span><br></pre></td></tr></table></figure>
+<pre><code>改变进度条的HTML结构。为了保证进度条正常工作，需要一个包含role=&apos;bar&apos; 属性的元素。</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NProgress.configure(&#123;</span><br><span class="line">  template: <span class="string">"&lt;div class='....'&gt;...&lt;/div&gt;"</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<pre><code>ease和speed
+
+ease可传递CSS3缓冲动画字符串（如ease、linear、ease-in、ease-out、ease-in-out、cubic-bezier）。speed为动画速度（默认200，单位ms）。</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">NProgress.configure(&#123; easing: <span class="string">'ease'</span>, speed: 500 &#125;);</span><br></pre></td></tr></table></figure>
+<pre><code>trickle
+
+是否显示进度条，默认：true</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">NProgress.configure(&#123; trickle: <span class="literal">false</span> &#125;);</span><br></pre></td></tr></table></figure>
+<pre><code>trickleSpeed
+
+设置每次进度条步进速度（ms）。</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">NProgress.configure(&#123; trickleSpeed: 200 &#125;);</span><br></pre></td></tr></table></figure>
+<pre><code>showSpinner
+
+是否显示环形进度动画，默认true。</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NProgress.configure(&#123; showSpinner: <span class="literal">false</span> &#125;);</span><br></pre></td></tr></table></figure>
+<pre><code>parent
+
+指定改变的父容器，默认body。</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NProgress.configure(&#123; parent: <span class="string">'#container'</span> &#125;);</span><br></pre></td></tr></table></figure>
+<p>//技巧总结  此方法挂在window上 是为了监听项目中所有的ajax请求<br>//ajax事件 可参考 jquery 文档 <a href="http://jquery.cuishifeng.cn/">http://jquery.cuishifeng.cn/</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
     
 <div class="card">
     
@@ -230,7 +310,7 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left ">
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
@@ -269,7 +349,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            2
+                            3
                         </p>
                     </a>
                 </div>
@@ -281,7 +361,7 @@
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            0
+                            1
                         </p>
                     </a>
                 </div>
@@ -293,7 +373,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            1
+                            2
                         </p>
                     </a>
                 </div>
@@ -351,11 +431,165 @@
     
         
     
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/web%E5%89%8D%E7%AB%AF/">
+            <span class="level-start">
+                <span class="level-item">web前端</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/li/" style="font-size: 10px;">li</a> <a href="/tags/%E8%BF%9B%E5%BA%A6%E6%9D%A1%E6%8F%92%E4%BB%B6/" style="font-size: 10px;">进度条插件</a>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen is-sticky">
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/03/27/nprogress.js%E8%BF%9B%E5%BA%A6%E6%9D%A1/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="NProgress.js之进度条插件">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-26T16:11:12.000Z">2020-03-27</time></div>
+                    <a href="/2020/03/27/nprogress.js%E8%BF%9B%E5%BA%A6%E6%9D%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">NProgress.js之进度条插件</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/27/hy123/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1312059974,1893880587&amp;fm=111&amp;gp=0.jpg" alt="hy123">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-26T16:09:12.000Z">2020-03-27</time></div>
+                    <a href="/2020/03/27/hy123/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hy123</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/26/hello-world/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-26T02:56:53.630Z">2020-03-26</time></div>
+                    <a href="/2020/03/26/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
+    
         <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/03/27/nprogress.js%E8%BF%9B%E5%BA%A6%E6%9D%A1/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="NProgress.js之进度条插件">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-26T16:11:12.000Z">2020-03-27</time></div>
+                    <a href="/2020/03/27/nprogress.js%E8%BF%9B%E5%BA%A6%E6%9D%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">NProgress.js之进度条插件</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -412,7 +646,7 @@
                     <span class="level-item">三月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -422,37 +656,9 @@
     </div>
 </div>
     
-        
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            
-            </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            标签云
-        </h3>
-        <a href="/tags/li/" style="font-size: 10px;">li</a>
-    </div>
-</div>
-    
-    
-        <div class="column-right-shadow is-hidden-widescreen ">
-        
-        </div>
     
 </div>
 
-                
             </div>
         </div>
     </section>
@@ -474,7 +680,7 @@
 -                <span id="busuanzi_container_site_uv">
 -                共<span id="busuanzi_value_site_uv">0</span>个访客
 -                </span>
-+               
++                <span id="busuanzi_container_site_uv"> 来访 <span id="busuanzi_value_site_uv"></span>人</span>
 +                <span id="busuanzi_container_site_pv">, 总访问 <span id="busuanzi_value_site_pv"></span>次</span>
                  
                  </p>
