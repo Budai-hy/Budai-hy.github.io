@@ -7,16 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>归档 - Hexo</title>
+<title>表格分页插件Bootstrap Paginator的使用动态渲染html - Hexo</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+    <meta name="description" content="Bootstrap Paginator　　 说明:　　Bootstrap Paginator是基于Bootstrap 所开发的 　　下载地址:        https:&#x2F;&#x2F;github.com&#x2F;lyonlai&#x2F;bootstrap-paginator   更多配置可以参考官方文档   下面是基于artTemplate界面排版插件，以及jquery所写的案例，包含有后台数据，前端页面动态渲染">
+<meta property="og:type" content="article">
+<meta property="og:title" content="表格分页插件Bootstrap Paginator的使用动态渲染html">
+<meta property="og:url" content="http://yoursite.com/2020/03/28/Bootstrap%E8%A1%A8%E6%A0%BC%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Bootstrap Paginator　　 说明:　　Bootstrap Paginator是基于Bootstrap 所开发的 　　下载地址:        https:&#x2F;&#x2F;github.com&#x2F;lyonlai&#x2F;bootstrap-paginator   更多配置可以参考官方文档   下面是基于artTemplate界面排版插件，以及jquery所写的案例，包含有后台数据，前端页面动态渲染">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="article:published_time" content="2020-03-28T15:15:12.000Z">
+<meta property="article:modified_time" content="2020-04-04T15:57:05.896Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="表格分页条插件">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
@@ -76,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Hexo" height="28">
+                <img src="/images/logo.svg" alt="表格分页插件Bootstrap Paginator的使用动态渲染html" height="28">
             
             </a>
         </div>
@@ -87,7 +92,7 @@
                 <a class="navbar-item"
                 href="/">主页</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/archives">归档</a>
                 
                 <a class="navbar-item"
@@ -118,112 +123,169 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
         
-<div class="card widget">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-28T15:15:12.000Z">2020-03-28</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 404 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                表格分页插件Bootstrap Paginator的使用动态渲染html
+            
+        </h1>
+        <div class="content">
+            <hr>
+<h2 id="Bootstrap-Paginator"><a href="#Bootstrap-Paginator" class="headerlink" title="Bootstrap Paginator"></a>Bootstrap Paginator</h2><p>　　</p>
+<p>说明:<br>　　Bootstrap Paginator是基于Bootstrap 所开发的</p>
+<p>　　下载地址:<br>        <a href="https://github.com/lyonlai/bootstrap-paginator">https://github.com/lyonlai/bootstrap-paginator</a><br>   更多配置可以参考官方文档<br>   下面是基于artTemplate界面排版插件，以及jquery所写的案例，包含有后台数据，前端页面动态渲染</p>
+<a id="more"></a>
+<h2 id="html部分"><a href="#html部分" class="headerlink" title="html部分"></a>html部分</h2><p>记得引入相关插件bootstrap-paginator，bootstrap，jquery,artTemplate</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--内容--&gt;</span><br><span class="line">&lt;section class=<span class="string">"ad_section"</span>&gt;</span><br><span class="line">    &lt;!--顶部导航--&gt;</span><br><span class="line">    &lt;nav class=<span class="string">"ad_nav"</span>&gt;</span><br><span class="line">        &lt;a data-menu href=<span class="string">"javascript:;"</span>&gt;&lt;span class=<span class="string">"glyphicon glyphicon-align-justify"</span>&gt;&lt;/span&gt;&lt;/a&gt;</span><br><span class="line">        &lt;a data-logout href=<span class="string">"javascript:;"</span>&gt;&lt;span class=<span class="string">"glyphicon glyphicon-log-out"</span>&gt;&lt;/span&gt;&lt;/a&gt;</span><br><span class="line">    &lt;/nav&gt;</span><br><span class="line">    &lt;div class=<span class="string">"container-fluid"</span>&gt;</span><br><span class="line">        &lt;!--路径导航--&gt;</span><br><span class="line">        &lt;ol class=<span class="string">"breadcrumb"</span>&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=<span class="string">"#"</span>&gt;管理系统&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li class=<span class="string">"active"</span>&gt;分类管理&lt;/li&gt;</span><br><span class="line">            &lt;li class=<span class="string">"active"</span>&gt;二级分类&lt;/li&gt;</span><br><span class="line">        &lt;/ol&gt;</span><br><span class="line">        &lt;div class=<span class="string">"ad_content"</span>&gt;</span><br><span class="line">            &lt;button data-toggle=<span class="string">"modal"</span> data-target=<span class="string">"#save"</span> class=<span class="string">"btn btn-default mb_15"</span>&gt;添加分类&lt;/button&gt;</span><br><span class="line">            &lt;table class=<span class="string">"table table-bordered"</span>&gt;</span><br><span class="line">                &lt;thead&gt;</span><br><span class="line">                    &lt;tr&gt;</span><br><span class="line">                        &lt;th&gt;序号&lt;/th&gt;</span><br><span class="line">                        &lt;th&gt;一级分类名称&lt;/th&gt;</span><br><span class="line">                        &lt;th&gt;二级分类名称（品牌）&lt;/th&gt;</span><br><span class="line">                        &lt;th&gt;品牌logo&lt;/th&gt;</span><br><span class="line">                    &lt;/tr&gt;</span><br><span class="line">                &lt;/thead&gt;</span><br><span class="line">                &lt;tbody&gt;</span><br><span class="line"></span><br><span class="line">                &lt;/tbody&gt;</span><br><span class="line">            &lt;/table&gt;</span><br><span class="line">            &lt;nav class=<span class="string">"text-right"</span>&gt;</span><br><span class="line">                &lt;ul class=<span class="string">"pagination"</span>&gt;</span><br><span class="line">                   &lt;!--TODO--&gt;</span><br><span class="line">                &lt;/ul&gt;</span><br><span class="line">            &lt;/nav&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/template"</span> id=<span class="string">"list"</span>&gt;</span><br><span class="line">    &lt;% var $ = getJquery(); %&gt;</span><br><span class="line">    &lt;% $.each(rows,<span class="keyword">function</span>(i,item)&#123; %&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;th scope=<span class="string">"row"</span>&gt;&lt;%=i+1+(page-1)*size%&gt;&lt;/th&gt;</span><br><span class="line">            &lt;td&gt;&lt;%=item.categoryName%&gt;&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;&lt;%=item.brandName%&gt;&lt;/td&gt;</span><br><span class="line">            &lt;td&gt;&lt;img width=<span class="string">"40"</span> height=<span class="string">"40"</span> src=<span class="string">"&lt;%=item.brandLogo%&gt;"</span> alt=<span class="string">""</span>&gt;&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">    &lt;% &#125;); %&gt;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>js配置部分</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    window.page = 1;</span><br><span class="line"></span><br><span class="line">    /*模板无法访问外部变量的解决方案*/</span><br><span class="line">    /*var getJquery = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        <span class="built_in">return</span> jQuery;</span><br><span class="line">    &#125;*/</span><br><span class="line">    /*辅助方法：在模板内部可以使用的函数*/</span><br><span class="line">    template.helper(<span class="string">'getJquery'</span>,<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        <span class="built_in">return</span> jQuery;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    /*1.默认第一页展示*/</span><br><span class="line">    var render = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        getCateSecondData(<span class="keyword">function</span> (data) &#123;</span><br><span class="line">            /*模板渲染*/</span><br><span class="line">            $(<span class="string">'tbody'</span>).html(template(<span class="string">'list'</span>,data));</span><br><span class="line">            /*初始化分页组件  根据数据*/</span><br><span class="line">            /*2.分页展示*/</span><br><span class="line">            $(<span class="string">'.pagination'</span>).bootstrapPaginator(&#123;</span><br><span class="line">                /*对应的bootstrap版本*/</span><br><span class="line">                bootstrapMajorVersion:3,</span><br><span class="line">                /*分页按钮的大小*/</span><br><span class="line">                size:<span class="string">'small'</span>,</span><br><span class="line">                /*当前页码*/</span><br><span class="line">                currentPage:data.page,</span><br><span class="line">                /*一共多少页*/</span><br><span class="line">                totalPages:Math.ceil(data.total/data.size),</span><br><span class="line">                /*页码按钮的数量 默认是5*/</span><br><span class="line">                numberOfPages:3,</span><br><span class="line">                /*点击页码渲染*/</span><br><span class="line">                /*监听按钮的点击事件 获取点击的时候的页码*/</span><br><span class="line">                onPageClicked:<span class="keyword">function</span> (event, originalEvent, <span class="built_in">type</span>,page) &#123;</span><br><span class="line">                    /*1. event jquery的事件對象*/</span><br><span class="line">                    /*2. originalEvent 原生dom的事件對象*/</span><br><span class="line">                    /*3. <span class="built_in">type</span> 按鈕的類型 */</span><br><span class="line">                    /*4. 按鈕對應的頁碼*/</span><br><span class="line">                    //console.log(page);</span><br><span class="line">                    window.page = page;</span><br><span class="line">                    render();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    render();</span><br><span class="line">    var getCateSecondData = <span class="keyword">function</span> (callback) &#123;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        <span class="built_in">type</span>:<span class="string">'get'</span>,</span><br><span class="line">        url:<span class="string">'/category/querySecondCategoryPaging'</span>,/*后台数据对应的api*/</span><br><span class="line">        data:&#123;</span><br><span class="line">            page: window.page || 1,</span><br><span class="line">            pageSize:2</span><br><span class="line">        &#125;,</span><br><span class="line">        dataType:<span class="string">'json'</span>,</span><br><span class="line">        success:<span class="keyword">function</span> (data) &#123;</span><br><span class="line">            callback &amp;&amp; callback(data);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="成品图展示"><a href="#成品图展示" class="headerlink" title="成品图展示"></a>成品图展示</h2><img src="">
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%E8%A1%A8%E6%A0%BC%E5%88%86%E9%A1%B5%E6%9D%A1%E6%8F%92%E4%BB%B6/" rel="tag">表格分页条插件</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <h3 class="tag is-link">
-        2020
-        </h3>
-        <div class="timeline">
-        
-            <article class="media">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-04-02T08:48:49.032Z">2020-04-02</time>
-                        <a href="/2020/04/02/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1312059974,1893880587&amp;fm=111&amp;gp=0.jpg" alt="支付宝"></div>
+</a>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-03-29T15:00:10.000Z">2020-03-29</time>
-                        <a href="/2020/03/29/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%E6%8F%92%E4%BB%B6/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数据验证插件bootstrapValidator 教程</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-03-28T15:15:12.000Z">2020-03-28</time>
-                        <a href="/2020/03/28/Bootstrap%E8%A1%A8%E6%A0%BC%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6/" class="title has-link-black-ter is-size-6 has-text-weight-normal">表格分页插件Bootstrap Paginator的使用动态渲染html</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1312059974,1893880587&amp;fm=111&amp;gp=0.jpg" alt="微信"></div>
+</a>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-03-26T16:11:12.000Z">2020-03-27</time>
-                        <a href="/2020/03/27/nprogress.js%E8%BF%9B%E5%BA%A6%E6%9D%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">NProgress.js之进度条插件</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<a class="button is-warning donate" onclick="document.getElementById(&#39;paypal-donate-form&#39;).submit()">
+    <span class="icon is-small">
+        <i class="fab fa-paypal"></i>
+    </span>
+    <span>Paypal</span>
+</a>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" rel="noopener" id="paypal-donate-form">
+    <input type="hidden" name="cmd" value="_donations" />
+    <input type="hidden" name="business" value="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1312059974,1893880587&amp;fm=111&amp;gp=0.jpg" />
+    <input type="hidden" name="currency_code" value="USD" />
+</form>
+
                 
-                <a href="/2020/03/27/hy123/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1312059974,1893880587&amp;fm=111&amp;gp=0.jpg" alt="hy123">
-                    </p>
-                </a>
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-03-26T16:09:12.000Z">2020-03-27</time>
-                        <a href="/2020/03/27/hy123/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hy123</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
+<a class="button is-danger donate" href="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1312059974,1893880587&amp;fm=111&amp;gp=0.jpg" target="_blank" rel="noopener">
+    <span class="icon is-small">
+        <i class="fab fa-patreon"></i>
+    </span>
+    <span>Patreon</span>
+</a>
+
+                
         </div>
     </div>
 </div>
 
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/03/29/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%E6%8F%92%E4%BB%B6/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">数据验证插件bootstrapValidator 教程</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/27/nprogress.js%E8%BF%9B%E5%BA%A6%E6%9D%A1/">
+                <span class="level-item">NProgress.js之进度条插件</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2020/03/28/Bootstrap%E8%A1%A8%E6%A0%BC%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6/';
+        this.page.identifier = '2020/03/28/Bootstrap表格分页插件/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + '不能为空' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
     
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 
@@ -686,7 +748,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Hexo" height="28">
+                    <img src="/images/logo.svg" alt="表格分页插件Bootstrap Paginator的使用动态渲染html" height="28">
                 
                 </a>
                 <p class="is-size-7">

@@ -7,16 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>归档 - Hexo</title>
+<title>数据验证插件bootstrapValidator 教程 - Hexo</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+    <meta name="description" content="bootstrapValidator　　 说明:　　Bootstrap Paginator是基于jquery，Bootstrap 所开发的 　　下载地址:        https:&#x2F;&#x2F;github.com&#x2F;nghuuphuoc&#x2F;bootstrapvalidator&#x2F;archive&#x2F;v0.4.5.zip    在线连接调用：        https:&#x2F;&#x2F;www.bootcdn.cn&#x2F;boots">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据验证插件bootstrapValidator 教程">
+<meta property="og:url" content="http://yoursite.com/2020/03/29/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%E6%8F%92%E4%BB%B6/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="bootstrapValidator　　 说明:　　Bootstrap Paginator是基于jquery，Bootstrap 所开发的 　　下载地址:        https:&#x2F;&#x2F;github.com&#x2F;nghuuphuoc&#x2F;bootstrapvalidator&#x2F;archive&#x2F;v0.4.5.zip    在线连接调用：        https:&#x2F;&#x2F;www.bootcdn.cn&#x2F;boots">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="article:published_time" content="2020-03-29T15:00:10.000Z">
+<meta property="article:modified_time" content="2020-04-04T15:55:20.386Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="数据验证">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
@@ -76,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Hexo" height="28">
+                <img src="/images/logo.svg" alt="数据验证插件bootstrapValidator 教程" height="28">
             
             </a>
         </div>
@@ -87,7 +92,7 @@
                 <a class="navbar-item"
                 href="/">主页</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/archives">归档</a>
                 
                 <a class="navbar-item"
@@ -118,112 +123,178 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
         
-<div class="card widget">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-29T15:00:10.000Z">2020-03-29</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 916 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                数据验证插件bootstrapValidator 教程
+            
+        </h1>
+        <div class="content">
+            <hr>
+<h2 id="bootstrapValidator"><a href="#bootstrapValidator" class="headerlink" title="bootstrapValidator"></a>bootstrapValidator</h2><p>　　</p>
+<p>说明:<br>　　Bootstrap Paginator是基于jquery，Bootstrap 所开发的</p>
+<p>　　下载地址:<br>        <a href="https://github.com/nghuuphuoc/bootstrapvalidator/archive/v0.4.5.zip">https://github.com/nghuuphuoc/bootstrapvalidator/archive/v0.4.5.zip</a><br>    在线连接调用：<br>        <a href="https://www.bootcdn.cn/bootstrap-validator/">https://www.bootcdn.cn/bootstrap-validator/</a><br>   更多配置可以参考官方文档<br>           <a href="http://bootstrapvalidator.votintsev.ru/getting-started/">http://bootstrapvalidator.votintsev.ru/getting-started/</a> 查看文档</p>
+<h2 id="简单案例"><a href="#简单案例" class="headerlink" title="简单案例"></a>简单案例</h2><a id="more"></a>
+<p>一.首先引入BootstrapValidator插件<br>BootstrapValidator插件需要jQuery和Bootstrap 3<br>引入js和css文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"/path/to/bootstrap/css/bootstrap.css"</span>/&gt;</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"/path/to/dist/css/bootstrapValidator.min.css"</span>/&gt;</span><br><span class="line"></span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"/path/to/jquery/jquery-1.10.2.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"/path/to/bootstrap/js/bootstrap.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;!-- 使用压缩过的版本--&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"/path/to/dist/js/bootstrapValidator.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;!-- 使用包含所有验证器的未压缩版本 --&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"/path/to/dist/js/bootstrapValidator.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="二-添加验证规则"><a href="#二-添加验证规则" class="headerlink" title="二.添加验证规则"></a>二.添加验证规则</h2><p>1.使用HTML添加简单验证<br>如果想对某一个字段添加验证规则，需要<div class="form-group"></div>包裹，input标签必须有name值，此值为验证匹配的字段。其实就是要符合bootstrap表单结构</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">"form-group"</span>&gt;</span><br><span class="line">    &lt;label <span class="keyword">for</span>=<span class="string">"exampleInputEmail1"</span>&gt;Email address&lt;/label&gt;</span><br><span class="line">    &lt;input <span class="built_in">type</span>=<span class="string">"email"</span> name=<span class="string">"email"</span> class=<span class="string">"form-control"</span> id=<span class="string">"exampleInputEmail1"</span> placeholder=<span class="string">"Email"</span> </span><br><span class="line">    data-bv-notempty=<span class="string">"true"</span> </span><br><span class="line">    data-bv-notempty-message=<span class="string">"不能为空"</span>&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>初始化bootstrapValidator，submitHandler 属性后面会介绍到</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#AppForm'</span>).bootstrapValidator(&#123;</span><br><span class="line">      submitHandler: <span class="keyword">function</span> (validator, form, submitButton) &#123;</span><br><span class="line">         // validator: 表单验证实例对象</span><br><span class="line">         // form  jq对象  指定表单对象</span><br><span class="line">         // submitButton  jq对象  指定提交按钮的对象</span><br><span class="line">         var tourl=<span class="string">"&#123;:U('Admin/User/userSet')&#125;"</span>;</span><br><span class="line">         var data=$(<span class="string">'#AppForm'</span>).serialize();</span><br><span class="line">         var id = $(<span class="string">'input[name=id]'</span>).val();</span><br><span class="line">         // 使用ajax发送表达数据</span><br><span class="line">         $.App.ajax(<span class="string">'post'</span>,tourl,data,null);</span><br><span class="line">         <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>使用data-bv-notempty 和 data-bv-notempty-message属性就可以简单进行非空验证。data-bv-notempty 有值就进行非空验证，data-bv-notempty-message 中的值为提示消息</p>
+<p>2.使用js添加验证<br>简述 bootstrapValidator 使用方法。想查看更多可以访问<a href="http://bootstrapvalidator.votintsev.ru/getting-started/">http://bootstrapvalidator.votintsev.ru/getting-started/</a> 查看文档</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'form'</span>).bootstrapValidator(&#123;</span><br><span class="line">      // 默认的提示消息</span><br><span class="line">      message: <span class="string">'This value is not valid'</span>,</span><br><span class="line">      // 表单框里右侧的icon</span><br><span class="line">      feedbackIcons: &#123;</span><br><span class="line">        　　　　　　　　valid: <span class="string">'glyphicon glyphicon-ok'</span>,</span><br><span class="line">        　　　　　　　　invalid: <span class="string">'glyphicon glyphicon-remove'</span>,</span><br><span class="line">        　　　　　　　　validating: <span class="string">'glyphicon glyphicon-refresh'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      submitHandler: <span class="keyword">function</span> (validator, form, submitButton) &#123;</span><br><span class="line">        // 表单提交成功时会调用此方法</span><br><span class="line">        // validator: 表单验证实例对象</span><br><span class="line">        // form  jq对象  指定表单对象</span><br><span class="line">        // submitButton  jq对象  指定提交按钮的对象</span><br><span class="line">      &#125;,</span><br><span class="line">      fields: &#123;</span><br><span class="line">        username: &#123;</span><br><span class="line">          message: <span class="string">'用户名验证失败'</span>,</span><br><span class="line">          validators: &#123;</span><br><span class="line">            notEmpty: &#123;</span><br><span class="line">              message: <span class="string">'用户名不能为空'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            stringLength: &#123;  //长度限制</span><br><span class="line">              min: 6,</span><br><span class="line">              max: 18,</span><br><span class="line">              message: <span class="string">'用户名长度必须在6到18位之间'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            regexp: &#123; //正则表达式</span><br><span class="line">              regexp: /^[a-zA-Z0-9_]+$/,</span><br><span class="line">              message: <span class="string">'用户名只能包含大写、小写、数字和下划线'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            different: &#123;  //比较</span><br><span class="line">              field: <span class="string">'username'</span>, //需要进行比较的input name值</span><br><span class="line">              message: <span class="string">'密码不能与用户名相同'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            identical: &#123;  //比较是否相同</span><br><span class="line">              field: <span class="string">'password'</span>,  //需要进行比较的input name值</span><br><span class="line">              message: <span class="string">'两次密码不一致'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            remote: &#123; // ajax校验，获得一个json数据（&#123;<span class="string">'valid'</span>: <span class="literal">true</span> or <span class="literal">false</span>&#125;）</span><br><span class="line">              url: <span class="string">'user.php'</span>,       //验证地址</span><br><span class="line">              message: <span class="string">'用户已存在'</span>,   //提示信息</span><br><span class="line">              <span class="built_in">type</span>: <span class="string">'POST'</span>,          //请求方式</span><br><span class="line">              data: <span class="keyword">function</span>(validator)&#123;  //自定义提交数据，默认为当前input name值</span><br><span class="line">                <span class="built_in">return</span> &#123;</span><br><span class="line">                  act: <span class="string">'is_registered'</span>,</span><br><span class="line">                  username: $(<span class="string">"input[name='username']"</span>).val()</span><br><span class="line">                &#125;;</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        email: &#123;</span><br><span class="line">          validators: &#123;</span><br><span class="line">            notEmpty: &#123;</span><br><span class="line">              message: <span class="string">'邮箱地址不能为空'</span></span><br><span class="line">            &#125;,</span><br><span class="line">            emailAddress: &#123;</span><br><span class="line">              message: <span class="string">'邮箱地址格式有误'</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<p>可以看到，validators属性对应一个Json对象，里面可以包含多个验证的类型。我在 username 的 validators 里添加了很多属性，这些都是一些常用的属性方法，按需添加。</p>
+<p>我自定义的正则校验，⚠️与上面代码不是对应的，大家自己根据自己需求写正则<br>上面代码中 emailAddress 是邮箱地址验证，都不用我们去写邮箱的正则了。除此之外还有46个其他的验证类型，大家自己去看文档。再贴几个常见的。</p>
+<p>between: 验证输入值必须在某一个范围值内，比如大于1小于10<br>creditCard: 身份证验证<br>date: 日期验证<br>ip: IP地址验证<br>numeric: 数值验证<br>phone: 电话号码验证<br>url验证</p>
+<p>文章参考链接：<a href="https://www.jianshu.com/p/756b225d480d">https://www.jianshu.com/p/756b225d480d</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81/" rel="tag">数据验证</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <h3 class="tag is-link">
-        2020
-        </h3>
-        <div class="timeline">
-        
-            <article class="media">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-04-02T08:48:49.032Z">2020-04-02</time>
-                        <a href="/2020/04/02/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1312059974,1893880587&amp;fm=111&amp;gp=0.jpg" alt="支付宝"></div>
+</a>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-03-29T15:00:10.000Z">2020-03-29</time>
-                        <a href="/2020/03/29/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%E6%8F%92%E4%BB%B6/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数据验证插件bootstrapValidator 教程</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-03-28T15:15:12.000Z">2020-03-28</time>
-                        <a href="/2020/03/28/Bootstrap%E8%A1%A8%E6%A0%BC%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6/" class="title has-link-black-ter is-size-6 has-text-weight-normal">表格分页插件Bootstrap Paginator的使用动态渲染html</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1312059974,1893880587&amp;fm=111&amp;gp=0.jpg" alt="微信"></div>
+</a>
+
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-03-26T16:11:12.000Z">2020-03-27</time>
-                        <a href="/2020/03/27/nprogress.js%E8%BF%9B%E5%BA%A6%E6%9D%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">NProgress.js之进度条插件</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
-            <article class="media">
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<a class="button is-warning donate" onclick="document.getElementById(&#39;paypal-donate-form&#39;).submit()">
+    <span class="icon is-small">
+        <i class="fab fa-paypal"></i>
+    </span>
+    <span>Paypal</span>
+</a>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" rel="noopener" id="paypal-donate-form">
+    <input type="hidden" name="cmd" value="_donations" />
+    <input type="hidden" name="business" value="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1312059974,1893880587&amp;fm=111&amp;gp=0.jpg" />
+    <input type="hidden" name="currency_code" value="USD" />
+</form>
+
                 
-                <a href="/2020/03/27/hy123/" class="media-left">
-                    <p class="image is-64x64">
-                        <img class="thumbnail" src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1312059974,1893880587&amp;fm=111&amp;gp=0.jpg" alt="hy123">
-                    </p>
-                </a>
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-03-26T16:09:12.000Z">2020-03-27</time>
-                        <a href="/2020/03/27/hy123/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hy123</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        
+<a class="button is-danger donate" href="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1312059974,1893880587&amp;fm=111&amp;gp=0.jpg" target="_blank" rel="noopener">
+    <span class="icon is-small">
+        <i class="fab fa-patreon"></i>
+    </span>
+    <span>Patreon</span>
+</a>
+
+                
         </div>
     </div>
 </div>
 
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/04/02/hello-world/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Hello World</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/28/Bootstrap%E8%A1%A8%E6%A0%BC%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6/">
+                <span class="level-item">表格分页插件Bootstrap Paginator的使用动态渲染html</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2020/03/29/%E5%89%8D%E7%AB%AF%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%E6%8F%92%E4%BB%B6/';
+        this.page.identifier = '2020/03/29/前端数据验证插件/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + '不能为空' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
     
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
 </div>
                 
 
@@ -686,7 +757,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Hexo" height="28">
+                    <img src="/images/logo.svg" alt="数据验证插件bootstrapValidator 教程" height="28">
                 
                 </a>
                 <p class="is-size-7">
